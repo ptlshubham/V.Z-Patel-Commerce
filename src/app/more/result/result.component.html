@@ -31,171 +31,51 @@
         }
     </style>
     <!-- Intro Courses -->
-    <section class="intro-section gray-bg pt-94 md-pt-64 md-pb-70">
-        <div class="container">
-            <div class="row clearfix">
-                <!-- Content Column -->
-                <div class="col-lg-12 md-mb-50">
-                    <!-- Intro Info Tabs-->
-                    <div class="intro-info-tabs">
-                        <ul class="nav nav-tabs intro-tabs tabs-box" id="myTab" role="tablist">
-                            <li class="nav-item tab-btns" role="presentation">
-                                <a class="nav-link tab-btn active" id="Chemistry" data-bs-toggle="tab" href="#"
-                                    data-bs-target="#prod-overview" role="tab" aria-controls="prod-overview"
-                                    aria-selected="true">2021-22</a>
-                            </li>
-                        </ul>
-                        <div class="tab-content tabs-content" id="myTabContent">
-                            <div class="tab-pane tab fade show active" id="prod-overview" role="tabpanel"
-                                aria-labelledby="Chemistry">
-                                <div class="content white-bg pt-30">
-                                    <!-- Cource Overview -->
-                                    <div class="course-overview">
-                                        <div class="inner-box ">
+    <section class="intro-section gray-bg pt-40 md-pt-64 md-pb-70">
+        <div class="course-overview ">
+            <div class="inner-box">
+                <div class="main-content">
+                    <style>
+                        .rs-about.style1 .notice-bord.style1 {
+                            margin-top: 0px;
+                        }
+                    </style>
+                    <!-- Faq Section Start -->
+                    <div class="rs-faq-part rs-about style1">
+                        <div class="container">
+                            <div class="main-part">
+                                <div class="faq-content">
+                                    <h4 class="pt-40">Result List</h4>
 
-                                            <div class="rs-degree style1 modify  pt-60 pb-70 md-pt-70 md-pb-40">
-                                                <div id="rs-team" class="rs-team style1 orange-color white-bg">
-                                                    <div class="container">
-                                                        <h2>University Toppers</h2>
-                                                        <h5>B.Com.</h5>
-                                                        <div class="row">
-                                                            <div class="col-lg-3 col-sm-6 mb-30">
-                                                                <div class="team-item">
-                                                                    <img src="assets/images/anpatel/team/1.jpg" alt="">
-                                                                    <div class="content-part">
-                                                                        <h4 class="name"><a href="#">Dr. Jatin Patel</a>
-                                                                        </h4>
-                                                                        <span class="designation">Principal</span>
-                                                                        <ul class="social-links">
-                                                                            <li>Contact No : 9825355242</li>
-                                                                            <li>Email ID : principal@sanppgi.ac.in</li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-3 col-sm-6 mb-30">
-                                                                <div class="team-item">
-                                                                    <img src="assets/images/anpatel/team/2.jpg" alt="">
-                                                                    <div class="content-part">
-                                                                        <h4 class="name"><a href="#">
-                                                                                Dr. Rajesh Patel</a></h4>
-                                                                        <span class="designation">Associate Professor
-                                                                            And Head</span>
-                                                                        <ul class="social-links">
-                                                                            <li>Email ID : dr.rjpatel31@yahoo.in</li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-3 col-sm-6 mb-30">
-                                                                <div class="team-item">
-                                                                    <img src="assets/images/anpatel/team/3.jpg" alt="">
-                                                                    <div class="content-part">
-                                                                        <h4 class="name"><a href="#">
-                                                                                Dr. Amitkumar Dholakia</a></h4>
-                                                                        <span class="designation">Associate
-                                                                            Professor</span>
-                                                                        <ul class="social-links">
-                                                                            <li>Email ID : dholkia_amit@yahoo.com</li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-3 col-sm-6 mb-30">
-                                                                <div class="team-item">
-                                                                    <img src="assets/images/anpatel/team/4.jpg" alt="">
-                                                                    <div class="content-part">
-                                                                        <h4 class="name"><a href="#">
-                                                                                Dr. Vishant Patel</a></h4>
-                                                                        <span class="designation">Associate
-                                                                            Professor</span>
-                                                                        <ul class="social-links">
-                                                                            <li>Email ID : vish.ckpatel@gmail.com</li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-3 col-sm-6 mb-30">
-                                                                <div class="team-item">
-                                                                    <img src="assets/images/anpatel/team/5.jpg" alt="">
-                                                                    <div class="content-part">
-                                                                        <h4 class="name"><a href="#">
-                                                                                Dr. Darshan Patel</a></h4>
-                                                                        <span class="designation">Associate
-                                                                            Professor</span>
-                                                                        <ul class="social-links">
+                                    <h4 style="color: red;text-align: center;" *ngIf="resultData.length==0">
+                                        Data
+                                        Not Found !</h4>
+                                    <div class="accordion" id="accordionExample" *ngIf="resultData.length>0">
 
-                                                                            <li>Email ID : darshanswami@gmail.com</li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-3 col-sm-6 mb-30">
-                                                                <div class="team-item">
-                                                                    <img src="assets/images/anpatel/team/6.jpg" alt="">
-                                                                    <div class="content-part">
-                                                                        <h4 class="name"><a href="#">
-                                                                                Dr. Zarna Patel</a></h4>
-                                                                        <span class="designation">Associate
-                                                                            Professor</span>
-                                                                        <ul class="social-links">
-                                                                            <li>Email ID : zarnapatel211@yahoo.com</li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-3 col-sm-6 mb-30">
-                                                                <div class="team-item">
-                                                                    <img src="assets/images/anpatel/team/7.jpg" alt="">
-                                                                    <div class="content-part">
-                                                                        <h4 class="name"><a href="#">
-                                                                                Dr. Jemin Avlani</a></h4>
-                                                                        <span class="designation">Associate
-                                                                            Professor</span>
-                                                                        <ul class="social-links">
-                                                                            <li>Email ID : jemin.avalani@gmail.com</li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                        <div class="accordion-item card"
+                                            *ngFor="let r of resultData| paginate: {id:'listing1', itemsPerPage: 20, currentPage: pa };let i=index">
+                                            <div class="accordion-header card-header" id="headingOne" (click)="open(i)">
+                                                <button class="accordion-button card-link" type="button"
+                                                    data-bs-target="#collapseOne" aria-expanded="true"
+                                                    aria-controls="collapseOne">{{r.title}}</button>
+                                            </div>
+                                            <div id="collapseOne" class="accordion-collapse" *ngIf="r.cols"
+                                                (click)="open(i)" aria-labelledby="headingOne"
+                                                data-bs-parent="#accordionExample">
+                                                <div class="accordion-body card-body">
+                                                    <div class="row">
+                                                        <div class="col-lg-12">
+                                                            <img src="http://localhost:9000{{r.image}}" alt="">
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-12 col-md-12 mb-30">
-                                                    <div class="degree-wrap" style="overflow-x:auto;">
-                                                        <h2>M.Com. Result:</h2>
-                                                        <table>
-                                                            <tr>
-                                                                <td>Sr. No.</td>
-                                                                <td>Semester</td>
-                                                                <td>Result % (GPA)</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>1</td>
-                                                                <td>Sem-1</td>
-                                                                <td>8.50 GPA</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>2</td>
-                                                                <td>Sem-2</td>
-                                                                <td>9.25 GPA</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>3</td>
-                                                                <td>Sem-3</td>
-                                                                <td>8.75 GPA</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>2</td>
-                                                                <td>Sem-4</td>
-                                                                <td>8.50 GPA</td>
-                                                            </tr>
-
-                                                        </table>
-                                                    </div>
-                                                    <hr>
-                                                </div>
                                             </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3" *ngIf="resultData.length>0">
+                                        <div class="col text-end">
+                                            <pagination-controls id="listing1" (pageChange)="pa = $event">
+                                            </pagination-controls>
                                         </div>
                                     </div>
                                 </div>
@@ -206,7 +86,7 @@
             </div>
         </div>
     </section>
-    <!-- End intro Courses -->
-
+    <footer id="rs-footer" class="rs-footer">
+        <app-footer></app-footer>
+    </footer>
 </body>
-<app-footer></app-footer>

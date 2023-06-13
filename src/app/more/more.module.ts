@@ -8,6 +8,14 @@ import { LibraryComponent } from './library/library.component';
 import { ResultComponent } from './result/result.component';
 import { CampusComponent } from './campus/campus.component';
 import { SearchComponent } from './search/search.component';
+import { MagazineComponent } from './magazine/magazine.component';
+import { NewsComponent } from './news/news.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { PaperComponent } from './paper/paper.component';
+import { ScholarshipsComponent } from './scholarships/scholarships.component';
+import { SyllabusComponent } from './syllabus/syllabus.component';
+import { AcademicCalendarComponent } from './academic-calendar/academic-calendar.component';
 
 
 
@@ -16,13 +24,21 @@ import { SearchComponent } from './search/search.component';
     LibraryComponent,
     ResultComponent,
     CampusComponent,
-    SearchComponent
+    SearchComponent,
+    MagazineComponent,
+    NewsComponent,
+    PaperComponent,
+    ScholarshipsComponent,
+    SyllabusComponent,
+    AcademicCalendarComponent
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(MoreRoutes),
     HomeModule,
-    SharedModule
+    SharedModule,
+    NgxPaginationModule,
+    NgbModule
   ]
 })
 export class MoreModule { }

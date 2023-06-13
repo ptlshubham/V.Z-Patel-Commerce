@@ -5,7 +5,7 @@
                 <div class="row card1">
                     <a data-toggle="collapse" data-bs-parent="#accordion" data-bs-toggle="collapse" href="#collapseTwo">
                         <i class="fa fa-times-circle" style="float: right; color: white; font-size:24px"></i></a>
-                        <h6 style="color: white;text-align: center;">View Course</h6>
+                    <h6 style="color: white;text-align: center;">View Course</h6>
                     <div class="col-md-3">
                         <div class="servicesHome-box">
                             <ul>
@@ -91,10 +91,8 @@
                         <ul class="topbar-contact">
                             <li>
                                 <i class="flaticon-email"></i>
-                                <a href="mailto:dnipgs@cesociety.in" style="font-size:12px !important;">
-                                    dnipgs@cesociety.in</a>,
-                                <a href="mailto:principal@sanppgi.ac.in" style="font-size:12px !important;">
-                                    shridnpgs@gmail.com</a>
+                                <a href="mailto:vzp@cesociety.in" style="font-size:12px !important;">
+                                    vzp@cesociety.in</a>
                             </li>
                             <li>
                                 <i class="flaticon-phone"></i>
@@ -107,11 +105,7 @@
                         <ul class="topbar-right">
                             <li class="login-register" style="font-size:12px !important;">
                                 <i class="fa fa-clock-o" style="color: white;"></i>
-                                <a href="">Last Updated:27-june-2022</a>
-                            </li>
-                            <li class="login-register" style="font-size:12px !important;">
-                                <i class="fa fa-users" style="color: white;"></i>
-                                <a href="">Visitor:222500</a>
+                                <a href="#" style="color: white;">Last Updated: {{siteUpdate.updatedSite|date}}</a>
                             </li>
                         </ul>
                     </div>
@@ -123,8 +117,8 @@
                 <div class="col-lg-7 col-md-12 col-sm-12">
                     <div class="logo-cat-wrap">
                         <div class="logo-part">
-                            <a routerLink="/home/main" routerLinkActive="active">
-                                <img src="../../../assets/images/vzpatel/logo/V.Z PAtel 03.png" alt="">
+                            <a routerLink="/" routerLinkActive="active">
+                                <img src="assets/images/logo/1.png" alt="">
                             </a>
                         </div>
                     </div>
@@ -135,7 +129,7 @@
                         <li class="menu-item lm">
                             <div class="wrap">
                                 <div class="search">
-                                    <a class="card-link collapsed" data-bs-toggle="collapse" 
+                                    <a class="card-link collapsed" data-bs-toggle="collapse"
                                         data-bs-target="#collapseTwo" href="#" (click)="moreOpen()"
                                         aria-expanded="true">
                                         <input type="text" class="searchTerm" placeholder="What are you looking for?"
@@ -149,19 +143,19 @@
                         </li>
 
                         <li class="menu-item lm">
-                            <a href="http://www.cesociety.in/dnpg/Centenary.aspx">Centenary Celebration</a>
+                            <a href="https://www.cesociety.in/#/celebration" target="_blank">Centenary Celebration</a>
                         </li>
                         |
                         <li class="menu-item lm">
-                            <a (click)="openPopup3()">News</a>
+                            <a routerLink="/more/news" routerLinkActive="active">News</a>
                         </li>
                         |
                         <li class="menu-item lm">
-                            <a (click)="openPopup4()">Birthday</a>
+                            <a (click)="open(content)">Birthday</a>
                         </li>
                         |
                         <li class="menu-item lm">
-                            <a href="http://www.cesociety.in/Campus-Counselling-Program.aspx">Free counseling</a>
+                            <a href="https://www.cesociety.in/#/counselling" target="_blank">Free counseling</a>
                         </li>
                     </ul>
 
@@ -174,8 +168,6 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
                 aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation"
                 (click)="isCollapsed = !isCollapsed">
-                <!-- <span class="navbar-toggler-icon"> </span> -->
-                <!-- <img class="navbar-toggler-icon" src="assets/images/shape/icon.png" alt=""> -->
                 <i class="fa fa-bars"></i>
             </button>
 
@@ -183,9 +175,10 @@
                 <ul class="nav-menu" style="padding: 25px!important;">
                     <li class="btn-group">
                         <a class="btn btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false" routerLink="/home/main" routerLinkActive="active">Home</a>
+                            aria-expanded="false" routerLink="/" routerLinkActive="active">Home</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item">CES Home</a> </li>
+                            <li><a class="dropdown-item" href="http://www.cesociety.in/#/home/main" target="_blank">CES
+                                    Home</a> </li>
                         </ul>
                     </li>
                     <li class="btn-group">
@@ -212,21 +205,31 @@
                             <li><a class="dropdown-item">Our Magazine Balmitra</a> </li> -->
                         </ul>
                     </li>
-
+                    <li class="btn-group">
+                        <a class="btn btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Department</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" routerLink="/department/staff" routerLinkActive="active">Staff
+                                    Details</a> </li>
+                            <li><a class="dropdown-item" routerLink="/department/student"
+                                    routerLinkActive="active">Student Details</a> </li>
+                        </ul>
+                    </li>
                     <li class="btn-group">
                         <a class="btn btn-lg" type="button" data-bs-toggle="dropdown" aria-expanded="false"
                             routerLink="/infra/facilities" routerLinkActive="active">Facilities & Activities</a>
 
                     </li>
 
-                    <li class="btn-group">
-                        <a class="btn btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    <!-- <li class="btn-group">
+                        <a class="btn btn-lg dropdown-toggle" type="button" href="#" data-bs-toggle="dropdown"
                             aria-expanded="false">Course</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" routerLink="/course/syllabus" routerLinkActive="active">Syllabus</a>
+                            <li><a class="dropdown-item" routerLink="/course/syllabus"
+                                    routerLinkActive="active">Syllabus</a>
                             </li>
                         </ul>
-                    </li>
+                    </li> -->
                     <li class="btn-group">
                         <a class="btn btn-lg" routerLink="/basic/contact" routerLinkActive="active">Contact Us</a>
                     </li>
@@ -237,21 +240,16 @@
                             <!-- <li><a class="dropdown-item" routerLink="" routerLinkActive="active">Department</a> </li> -->
                             <li><a class="dropdown-item" routerLink="/more/result" routerLinkActive="active">Results</a>
                             </li>
-                            <li><a class="dropdown-item" routerLink="/more/library"
-                                    routerLinkActive="active">Library</a>
+                            <li><a class="dropdown-item" routerLink="/more/news" routerLinkActive="active">News</a>
                             </li>
-
-
-                            <li><a class="dropdown-item" routerLink="" routerLinkActive="active"
-                                    (click)="openPopup1()">Form</a> </li>
-                            <li><a class="dropdown-item" routerLink="" routerLinkActive="active"
-                                    (click)="openPopup2()">Annual Reports</a>
+                            <li><a class="dropdown-item" routerLink="" routerLinkActive="active">Student Corner</a>
+                            </li>
+                            <li><a class="dropdown-item" (click)="openLinks('forms')">Form</a> </li>
+                            <li><a class="dropdown-item" (click)="openLinks('report')">Reports</a>
                             </li>
                         </ul>
                     </li>
-
                 </ul>
-
             </div>
         </nav>
         <!-- MOBILEMENU -->
@@ -268,9 +266,10 @@
                                     <ul class="nav-menu">
 
                                         <li class="menu-item-has-children">
-                                            <a routerLink="/home/main" routerLinkActive="active">Home</a>
+                                            <a routerLink="/" routerLinkActive="active">Home</a>
                                             <ul class="sub-menu">
-                                                <li><a routerLinkActive="active">CES Home</a>
+                                                <li><a href="http://www.cesociety.in/#/home/main" target="_blank">CES
+                                                        Home</a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -298,33 +297,23 @@
                                                 <li><a href="#">Our Magazine Balmitra</a> </li> -->
                                             </ul>
                                         </li>
-
                                         <li class="menu-item-has-children">
-                                            <a routerLink="" routerLinkActive="active">Department</a>
+                                            <a>Department</a>
                                             <ul class="sub-menu">
-                                                <li class="menu-item-has-children">
-                                                    <a>B.Com.</a>
-                                                    <ul class="sub-menu">
-                                                        <li class="current-menu-item">
-                                                            <a routerLink="/department/staff"
-                                                                routerLinkActive="active">Staff Details</a>
-                                                        </li>
-                                                        <!-- <li class="menu-item-has-children current-menu-item">
-                                                            <a routerLink="/department/student"
-                                                                routerLinkActive="active">Student Details</a>
-                                                        </li> -->
-                                                    </ul>
-                                                </li>
+                                                <li><a routerLink="/department/staff" routerLinkActive="active">Staff
+                                                        Details</a> </li>
+                                                <li><a routerLink="/department/student"
+                                                        routerLinkActive="active">Student Details</a> </li>
                                             </ul>
                                         </li>
-
-                                        <li class="menu-item-has-children">
-                                            <a href="">Course</a>
+                                        <!-- <li class="menu-item-has-children">
+                                            <a href="#">Course</a>
                                             <ul class="sub-menu">
-                                                <li><a routerLink="/course/syllabus" routerLinkActive="active">Syllabus</a>
+                                                <li><a routerLink="/course/syllabus"
+                                                        routerLinkActive="active">Syllabus</a>
                                                 </li>
                                             </ul>
-                                        </li>
+                                        </li> -->
                                         <li class="">
                                             <a routerLink="/basic/contact" routerLinkActive="active">Contact Us</a>
                                         </li>
@@ -334,15 +323,34 @@
                                                 <!-- <li><a routerLink="" routerLinkActive="active">Department</a> </li> -->
                                                 <li><a routerLink="/more/result" routerLinkActive="active">Results</a>
                                                 </li>
-                                                <li><a routerLink="/more/library" routerLinkActive="active">Library</a>
+                                                <li>
+                                                    <a routerLink="/more/news" routerLinkActive="active">News</a>
                                                 </li>
-
-
-                                                <li class="">
-                                                    <a (click)="openPopup1()"><span>Form</span></a>
+                                                <li class="menu-item-has-children">
+                                                    <a>Student Corner</a>
+                                                    <ul class="sub-menu">
+                                                        <li class="menu-item-has-children current-menu-item">
+                                                            <a routerLink="/more/academic-calendar"
+                                                                routerLinkActive="active">Academic Calendar</a>
+                                                        </li>
+                                                        <li class="current-menu-item">
+                                                            <a (click)="openLinks('syllabus')">Syllabus</a>
+                                                        </li>
+                                                        <li class="menu-item-has-children current-menu-item">
+                                                            <a routerLink="/more/paper" routerLinkActive="active">Old
+                                                                Question Papers</a>
+                                                        </li>
+                                                        <li class="menu-item-has-children current-menu-item">
+                                                            <a routerLink="/more/scholarship"
+                                                                routerLinkActive="active">Scholarships for Students</a>
+                                                        </li>
+                                                    </ul>
                                                 </li>
-                                                <li class="">
-                                                    <a (click)="openPopup2()"><span>Annual Reports</span></a>
+                                                <li>
+                                                    <a (click)="openLinks('forms')">Form</a>
+                                                </li>
+                                                <li>
+                                                    <a (click)="openLinks('report')">Reports</a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -357,11 +365,10 @@
             <!-- stickymenu -->
             <div style="max-width:100%;">
                 <div class="secondToolbar" [ngClass]="{'mat-elevation-z5' : true, 'sticky' : isSticky}">
-                    <!-- <img src="assets/images/CES_logo.png" alt=""> -->
                     <div class="row" style="background-color: #ba691f ; height: 50px;">
                         <div class="col-lg-2 text-end mt-10">
-                            <a routerLink="/home/main" routerLinkActive="active">
-                                <img src="../../../assets/images/vzpatel/logo/V.Z PAtel.png" alt="" width="45%">
+                            <a routerLink="/" routerLinkActive="active">
+                                <img src="assets/images/logo/2.png" alt="" width="45%">
                             </a>
                         </div>
                         <div class="col-lg-10 text-start" style="margin-top: 5px;">
@@ -371,9 +378,10 @@
                                         <ul class="nav-menu">
 
                                             <li class="menu-item-has-children">
-                                                <a routerLink="/home/main" routerLinkActive="active">Home</a>
+                                                <a routerLink="/" routerLinkActive="active">Home</a>
                                                 <ul class="sub-menu">
-                                                    <li><a routerLinkActive="active">CES Home</a>
+                                                    <li><a href="http://www.cesociety.in/#/home/main"
+                                                            target="_blank">CES Home</a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -402,31 +410,23 @@
                                                 </ul>
                                             </li>
                                             <li class="menu-item-has-children">
-                                                <a routerLink="" routerLinkActive="active">Department</a>
+                                                <a>Department</a>
                                                 <ul class="sub-menu">
-                                                    <li class="menu-item-has-children">
-                                                        <a href="#">B.Com.</a>
-                                                        <ul class="sub-menu">
-                                                            <li class="current-menu-item">
-                                                                <a routerLink="/department/staff"
-                                                                    routerLinkActive="active">Staff Details</a>
-                                                            </li>
-                                                            <!-- <li class="menu-item-has-children current-menu-item">
-                                                                <a routerLink="/department/student"
-                                                                    routerLinkActive="active">Student Details</a>
-                                                            </li> -->
-                                                        </ul>
-                                                    </li>
+                                                    <li><a routerLink="/department/staff"
+                                                            routerLinkActive="active">Staff Details</a> </li>
+                                                    <li><a routerLink="/department/student"
+                                                            routerLinkActive="active">Student Details</a> </li>
                                                 </ul>
                                             </li>
 
-                                            <li class="menu-item-has-children">
-                                                <a href="">Course</a>
+                                            <!-- <li class="menu-item-has-children">
+                                                <a href="#">Course</a>
                                                 <ul class="sub-menu">
-                                                    <li><a routerLink="/course/syllabus" routerLinkActive="active">Syllabus</a>
+                                                    <li><a routerLink="/course/syllabus"
+                                                            routerLinkActive="active">Syllabus</a>
                                                     </li>
                                                 </ul>
-                                            </li>
+                                            </li> -->
                                             <li class="">
                                                 <a routerLink="/basic/contact" routerLinkActive="active">Contact Us</a>
                                             </li>
@@ -435,15 +435,40 @@
                                                 <ul class="sub-menu">
                                                     <!-- <li><a routerLink="" routerLinkActive="active">Department</a> </li> -->
                                                     <li><a routerLink="/more/result"
-                                                            routerLinkActive="active">Results</a> </li>
-                                                    <li><a routerLink="/more/library"
-                                                            routerLinkActive="active">Library</a> </li>
-
-                                                    <li class="">
-                                                        <a (click)="openPopup1()"><span>Form</span></a>
+                                                            routerLinkActive="active">Results</a>
                                                     </li>
-                                                    <li class="">
-                                                        <a (click)="openPopup2()"><span>Annual Reports</span></a>
+                                                    <li><a routerLink="/more/news" routerLinkActive="active">News</a>
+                                                    </li>
+                                                    <li class="menu-item-has-children">
+                                                        <a>Student Corner</a>
+                                                        <ul class="sub-menu">
+                                                            <li class="menu-item-has-children current-menu-item">
+                                                                <a routerLink="/more/academic-calendar"
+                                                                    routerLinkActive="active">Academic Calendar</a>
+                                                            </li>
+                                                            <li class="current-menu-item">
+                                                                <a (click)="openLinks('syllabus')">Syllabus</a>
+                                                            </li>
+                                                            <li class="menu-item-has-children current-menu-item">
+                                                                <a routerLink="/more/paper"
+                                                                    routerLinkActive="active">Old
+                                                                    Question Papers</a>
+                                                            </li>
+                                                            <li class="menu-item-has-children current-menu-item">
+                                                                <a routerLink="/more/scholarship"
+                                                                    routerLinkActive="active">Scholarships for
+                                                                    Students</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a (click)="openLinks('forms')">Form</a>
+                                                    </li>
+                                                    <li>
+                                                        <a (click)="openLinks('report')">Reports</a>
+
+                                                        <a>Annual Reports</a>
+
                                                     </li>
                                                 </ul>
                                             </li>
@@ -458,191 +483,64 @@
 
             <!-- stickymenu -->
         </div>
+        <ng-template #content let-c="close" let-d="dismiss">
+            <div class="modal-header">
+                <div class="icon-part" style="margin: 10px 20px 10px 20px !important;">
+                    <img src="assets/images/cake.png" alt="">
+                </div>
+                <h4 class="modal-title" id="modal-basic-title" style="text-align: center;">Wish List of the Day !
+                </h4>
+                <button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+            </div>
+            <div class="modal-body">
+                <div classs="row">
+                    <p style="text-align: center; color: #ffcc00;" *ngIf="staffDataTable.length==0"><strong>
+                            There are no wishes to be made today!
+                        </strong></p>
+                </div>
 
-        <!-- Modal: modalAbandonedCart-->
-        <div class="modal fade right" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle1}">
-            <div class="modal-dialog modal-side modal-bottom-right modal-notify modal-info" role="document">
-                <!--Content-->
-                <div class="modal-content">
-                    <!--Header-->
-                    <div class="modal-header">
-                        <p class="heading">Forms
+
+                <div class="row" *ngFor="let s of staffDataTable;let i=index">
+                    <div class="col-1">
+                        <p style="text-align: center;"><strong>{{i+1}}</strong></p>
+                    </div>
+                    <div class="col-2">
+                        <img src="http://localhost:9000{{s.profile_image}}" class="img-thumbnail" alt="wedrfgthyuj" />
+                    </div>
+                    <div class="col-5">
+                        <p>
+                            <strong>
+                                {{s.name}} <br>
+                                {{s.instituteName}},<br>
+                                {{s.departmentName}},<br>
+                                {{s.designation}},<br>
+                            </strong>
                         </p>
-                        <button type="button" class="close" (click)="closePopup()">
-                            <span aria-hidden="true" class="white-text">&times;</span>
-                        </button>
                     </div>
-
-                    <!--Body-->
-                    <div class="modal-body">
-
-                        <div class="row">
-                            <div class="col-1"></div>
-                            <div class="col-10">
-                                <ul style="list-style-type:decimal;">
-                                    <li><a href="http://www.cesociety.in/dnpg/images/Forms/FILL-UP%20FORM.pdf"
-                                            target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-                                            TC/Transcript/MOI/(Principal/Faculty)/ Bonafide Certificate
-                                            Form
-                                        </a> </li>
-                                    <li><a href="http://www.cesociety.in/dnpg/images/Forms/admission%20form.pdf"
-                                            target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-                                            Admission Form</a> </li>
-                                </ul>
-                            </div>
-                            <div class="col-3"></div>
-                        </div>
+                    <div class="col-4">
+                        <ul class="address-widget">
+                            <li class="mt-3">
+                                <div class="desc">
+                                    <i class="flaticon-call" style="color: black;"></i> <a
+                                        href="tel:{{s.contact}}">{{s.contact}}</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="desc">
+                                    <i class="flaticon-email" style="color: black;"></i> <a href="mailto:{{s.email}}">
+                                        {{s.email}}</a> <br>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-
-                    <div class="modal-footer justify-content-center">
-                        <!-- <a type="button" class="btn btn-info">Go to cart</a> -->
-                        <a type="button" class="btn btn-outline-info waves-effect" data-dismiss="modal"
-                            (click)="closePopup()">Close</a>
-                    </div>
+                    <hr *ngIf="staffDataTable.length>1">
                 </div>
-                <!--/.Content-->
             </div>
-        </div>
-        <!-- Modal: modalAbandonedCart-->
-
-        <!-- Modal: modalAbandonedCart-->
-        <div class="modal fade right" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle2}">
-            <div class="modal-dialog modal-side modal-bottom-right modal-notify modal-info" role="document">
-                <!--Content-->
-                <div class="modal-content">
-                    <!--Header-->
-                    <div class="modal-header">
-                        <p class="heading">Annual Reports
-                        </p>
-                        <button type="button" class="close" (click)="closePopup()">
-                            <span aria-hidden="true" class="white-text">&times;</span>
-                        </button>
-                    </div>
-
-                    <!--Body-->
-                    <div class="modal-body">
-
-                        <div class="row">
-                            <div class="col-1"></div>
-                            <div class="col-10">
-                                <ul style="list-style-type:decimal;">
-                                    <li><a href="http://www.cesociety.in/sanppgi/images/news/ANNUAL%20REPORT-2012-13.pdf"
-                                            target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Annual
-                                            Report- 2012-13</a> </li>
-                                    <li><a href="http://www.cesociety.in/sanppgi/images/news/ANNUAL%20REPORT-2013-14.pdf"
-                                            target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Annual
-                                            Report- 2013-14</a> </li>
-                                    <li><a href="http://www.cesociety.in/sanppgi/images/news/Annual%20Report%202014-15.pdf"
-                                            target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Annual
-                                            Report- 2014-15</a> </li>
-                                    <li><a href="http://www.cesociety.in/sanppgi/images/news/Annual%20Report%202015-16.pdf"
-                                            target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Annual
-                                            Report- 2015-16</a> </li>
-                                    <li><a href="http://www.cesociety.in/sanppgi/images/news/Annual_Report_2017-18.pdf"
-                                            target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Annual
-                                            Report- 2017-18</a> </li>
-                                    <li><a href="http://www.cesociety.in/sanppgi/images/news/Annual%20Report%202018-19.pdf"
-                                            target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Annual
-                                            Report- 2018-19</a> </li>
-                                    <li><a href="http://www.cesociety.in/sanppgi/images/news/Annual%20Report%202019-20%20p1.pdf"
-                                            target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Annual
-                                            Report- 2019-20 Part1</a> </li>
-                                    <li><a href="http://www.cesociety.in/sanppgi/images/news/Final%20Annual%20Report%202019-20%20p2.pdf"
-                                            target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Annual
-                                            Report- 2019-20 Part2</a> </li>
-                                    <li><a href="http://www.cesociety.in/sanppgi/images/news/Final%20Annual%20Report%202021-22.pdf"
-                                            target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Annual
-                                            Report- 2020-21 & 2021-22</a> </li>
-                                </ul>
-                            </div>
-                            <div class="col-3"></div>
-                        </div>
-                    </div>
-
-                    <div class="modal-footer justify-content-center">
-                        <!-- <a type="button" class="btn btn-info">Go to cart</a> -->
-                        <a type="button" class="btn btn-outline-info waves-effect" data-dismiss="modal"
-                            (click)="closePopup()">Close</a>
-                    </div>
-                </div>
-                <!--/.Content-->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">
+                    <i class="fa fa-times" aria-hidden="true"></i> Close</button>
             </div>
-        </div>
-        <!-- Modal: modalAbandonedCart-->
-        <!--Modal: modalRelatedContent-->
-        <div class="modal right" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle3}">
-            <div class="modal-dialog modal-side modal-bottom-right modal-notify modal-info" role="document">
-                <!--Content-->
-                <div class="modal-content">
-                    <!--Header-->
-                    <div class="modal-header">
-                        <p class="heading">TODAY'S NEWS / EVENTS</p>
-
-                        <button type="button" class="close" (click)="closePopup()">
-                            <span aria-hidden="true" class="white-text">&times;</span>
-                        </button>
-                    </div>
-
-                    <!--Body-->
-                    <div class="modal-body">
-
-                        <div class="row">
-                            <div class="col-1"></div>
-                            <div class="col-10">
-                               <h5>SHRI ALPESH N. PATEL POST GRADUATE INSTITUTE OF SCIENCE AND RESEARCH, ANAND</h5>
-
-                                <p><strong>UNIVERSITY TOPPERS OF M.SC. MLT AND DMLT DEPARTMENT</strong></p>
-                                <p><a href="assets/sanppgi/images/news/MLT%20Final%20RESULT%20with%20university%20rank%20%20IT%20CELL.pdf" target="_blank"> M.SC MT (CLT) & DMLT
-                                    RESULT (2020 – 22)</a></p>
-                                <button type="button" class="btn btn-info btn-md" (click)="closePopup()">Close</button>
-                            </div>
-
-                            <div class="col-1"></div>
-                        </div>
-                    </div>
-
-                </div>
-                <!--/.Content-->
-            </div>
-        </div>
-        <!--Modal: modalRelatedContent-->
-         <!--Modal: modalRelatedContent-->
-         <div class="modal right" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle4}">
-            <div class="modal-dialog modal-left modal-bottom-right modal-notify modal-info" role="document">
-                <!--Content-->
-                <div class="modal-content">
-                    <!--Header-->
-                    <div class="modal-header">
-                        <p class="heading">BIRTHDAY</p>
-
-                        <button type="button" class="close" (click)="closePopup()">
-                            <span aria-hidden="true" class="white-text">&times;</span>
-                        </button>
-                    </div>
-
-                    <!--Body-->
-                    <div class="modal-body">
-
-                        <div class="row">
-                            <div class="col-1"></div>
-                            <div class="col-10">
-
-                                <p><strong>
-                                    DR. ZARNA PATEL (Assistant Professor At Shri Alpesh N. Patel Post Graduate Institute Of Science And Research, Anand)</strong></p>
-                                
-                                <button type="button" class="btn btn-info btn-md" (click)="closePopup()">Close</button>
-                            </div>
-
-                            <div class="col-1"></div>
-                        </div>
-                    </div>
-
-                </div>
-                <!--/.Content-->
-            </div>
-        </div>
-        <!--Modal: modalRelatedContent-->
-
+        </ng-template>
     </header>
 
 </div>

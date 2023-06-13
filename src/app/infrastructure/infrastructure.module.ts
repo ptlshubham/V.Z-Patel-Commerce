@@ -4,6 +4,7 @@ import { FacilitiesComponent } from './facilities/facilities.component';
 import { RouterModule } from '@angular/router';
 import { InfrastructureRoutes } from './infrastructure.routing';
 import { SharedModule } from '../shared/shared.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -14,7 +15,9 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     RouterModule.forChild(InfrastructureRoutes),
-    SharedModule
+    SharedModule,
+    NgbModule
+
   ]
 })
 export class InfrastructureModule { }

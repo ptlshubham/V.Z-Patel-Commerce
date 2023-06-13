@@ -9,6 +9,8 @@ import { SharedModule } from '../shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { BasicRoutes } from './basic.routing';
 import { HomeModule } from '../home/home.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -24,8 +26,10 @@ import { HomeModule } from '../home/home.module';
     CommonModule,
     SharedModule,
     RouterModule.forChild(BasicRoutes),
-    HomeModule
-
+    HomeModule,
+    FormsModule,
+    NgbModule,
+    ReactiveFormsModule
   ]
 })
 export class BasicModule { }

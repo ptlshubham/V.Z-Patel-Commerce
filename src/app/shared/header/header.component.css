@@ -20,7 +20,7 @@ header.navbar-sticky-on,
   opacity: 1;
 }
 .modal-dialog.modal-notify.modal-info .modal-header {
-  background-color: #565656;
+  background-color: #ba691f;
 }
 .modal-dialog .modal-content .modal-header {
   border-top-left-radius: 0.125rem;
@@ -96,12 +96,18 @@ button.close {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1050;
+  z-index: 1060;
   display: none;
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   outline: 0;
+}
+@media (min-width: 1200px){
+.modal-xl {
+    max-width: 1140px !important;
+}
 }
 .fade {
   transition: opacity .15s linear;
@@ -162,18 +168,20 @@ a{
 
 .secondToolbar {
     position: fixed;
+    display: none;
     top: 0;
     height: 0;
     opacity: 0;
     transition: opacity .25s ease-out, height .15s ease;
     cursor: default;
     user-select: none;
-    background-color: #565656 !important;
+    background-color: #ba691f !important;
   }
   
   .sticky {
     opacity: 1;
     transition: opacity .25s ease-out, height .15s ease;
+    display: block;
   }
 
   .jc{
@@ -188,24 +196,24 @@ a{
   
   .searchTerm {
     width: 100%;
-    border: 3px solid #565656;
+    border: 3px solid #ba691f;
     border-right: none;
     padding: 5px;
     height: 36.5px;
     border-radius: 5px 0 0 5px;
     outline: none;
-    color: #565656;
+    color: #ba691f;
   }
   
   .searchTerm:focus{
-    color: #565656;
+    color: #ba691f;
   }
   
   .searchButton {
     width: 40px;
     height: 36px;
-    border: 1px solid #565656;
-    background: #565656;
+    border: 1px solid #ba691f;
+    background: #ba691f;
     text-align: center;
     color: #fff;
     border-radius: 0 5px 5px 0;
@@ -290,7 +298,7 @@ a{
 
 .dropdown-item.active, .dropdown-item:active{
   background-color: #fff !important;
-  color: #565656;
+  color: #ba691f;
   
 }
 
@@ -298,7 +306,7 @@ a{
 
 .card1{
   margin: 30px;
-  background-color: #565656;
+  background-color: #ba691f;
     font-family: calibri, 'Open Sans', sans-serif;
     font-size: 18px;
     padding: 25px;
@@ -336,5 +344,58 @@ a{
   bottom: 10px;
   width: 400px;
   margin: 0;
+}
+@media (min-width:320px) {
+  .full-width-header .rs-header .logo-part img {
+    max-height: 54px !important;
+    margin-top: -23px;
+  }
+}
+
+@media (min-width:481px) {
+  /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+  .full-width-header .rs-header .logo-part img {
+    max-height: 56px !important;
+    margin-top: -21px;
+  }
+}
+
+@media (min-width:641px) {
+  /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+  .full-width-header .rs-header .logo-part img {
+    max-height: 52px !important;
+    margin-top: -23px;
+  }
+}
+
+@media (min-width:961px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+  .full-width-header .rs-header .logo-part img {
+    max-height: 72px !important;
+    margin-top: -8px;
+  }
+}
+
+@media (min-width:1025px) {
+  /* big landscape tablets, laptops, and desktops */
+  .full-width-header .rs-header .logo-part img {
+    max-height: 94px !important;
+    margin-top: -8px;
+  }
+}
+
+@media (min-width:1281px) {
+  /* hi-res laptops and desktops */
+  .full-width-header .rs-header .logo-part img {
+    max-height: 94px !important;
+    margin-top: -8px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .full-width-header .rs-header .logo-part img {
+    max-height: 94px !important;
+    margin-top: -8px;
+  }
 }
 

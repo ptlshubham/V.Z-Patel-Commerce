@@ -1,3 +1,8 @@
-.nav-link{
-    color: #626262;
+
+.rs-team.style1 .team-item .content-part{
+    top:45% !important;
+}
+
+.textCustom{
+    color: white !important;
 }
