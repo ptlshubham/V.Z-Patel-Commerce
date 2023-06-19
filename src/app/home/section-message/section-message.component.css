@@ -135,7 +135,8 @@
     }
     .video-section img {
         width: 100%;
-        height: auto;
+        height: 100%;
+
     }
     @media (min-width: 768px){
     .col-md-4 {
